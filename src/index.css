@@ -1,0 +1,35 @@
+@import url('./styles/variables.css');
+@import url('./styles/fonts.css');
+
+
+body {
+    font-family: font-primary-regular;;
+    /* color: var(--color-manchester);
+    background-color: var(--primary-background);
+    
+    margin: 50px;
+    h1 {
+        font-family: font-primary-black;
+        font-size: 10rem;
+    }
+
+    h2 {
+        font-size: 10rem;
+        font-family: font-primary-bold;
+    }
+
+    h3 {
+        font-size: 10rem;
+        font-family: font-primary-semibold;
+    }
+
+    h4 {
+        font-size: 10rem;
+        font-family: font-primary-regular;
+    }
+
+    h5 {
+        font-size: 10rem;
+        font-family: font-primary-extralight;
+    } */
+}

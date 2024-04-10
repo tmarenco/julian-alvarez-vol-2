@@ -1,0 +1,50 @@
+/* PRIMARY? */
+/* HEADER-OPTIONS - TEXTO ABAJO DEL NOMBRE - LABELS DE DATOS DE NUMERO Y POSICION - BIO - DATOS BIO - texto en select - JORNADA*/
+@font-face {
+    font-family: font-primary-regular;
+    src: url(/src/assets/fonts/TitilliumWeb-Regular.ttf);
+}
+
+/* TITLE*/ 
+@font-face {
+    font-family: font-primary-black;
+    src: url(/src/assets/fonts/TitilliumWeb-Black.ttf);
+}
+
+/* LIGA EN LISTADO DE GOLES - GOLES (LABEL?) */
+@font-face {
+    font-family: font-primary-bold;
+    src: url(/src/assets/fonts/TitilliumWeb-Bold.ttf);
+}
+
+/* TITULOS DE CUADRITOS - MIRAR GOLES*/
+@font-face {
+    font-family: font-primary-semibold;
+    src: url(/src/assets/fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+/* NO LA VEO USADA */
+@font-face {
+    font-family: font-primary-extralight;
+    src: url(/src/assets/fonts/TitilliumWeb-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: font-urban;
+    src: url(/src/assets/fonts/Urban-Calligraphy.ttf);
+}
+
+@font-face {
+    font-family: font-anton;
+    src: url(/src/assets/fonts/Anton-Regular.ttf);
+}
+
+@font-face {
+    font-family: font-data;
+    src: url(/src/assets/fonts/KodeMono-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: font-accent;
+    src: url(/src/assets/fonts/Mostwasted.ttf);
+}

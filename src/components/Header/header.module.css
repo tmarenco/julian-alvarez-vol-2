@@ -1,0 +1,55 @@
+.header-container {
+    background-color: var(--primary-background);
+    color: white;
+    height: 10vh;
+}
+
+.header-content{
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.header-items {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        justify-content: center;;
+      }
+}
+
+.header-teams {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.header-nav-options{
+    display: flex;
+
+    .nav-option {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        opacity: 50%;
+
+
+        @media (min-width: 768px) {
+            margin: 0 1rem;
+            font-size: 29px;
+        }
+    }
+
+
+    .nav-option:hover {
+        text-decoration: underline solid white;
+        opacity: 75%;
+    }
+}
+
+.header-option-active{
+    opacity: 100%;
+}

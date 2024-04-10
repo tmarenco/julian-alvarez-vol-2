@@ -1,0 +1,161 @@
+.landing-container {
+    position: relative;
+    background-color: var(--primary-background);
+    color: white;
+    width: 100%;
+    height: 90vh
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+}
+
+.landing-urban-content {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    /* container-type: inline-size;
+    resize: horizontal; */
+
+        /* background-image: url('/src/assets/images/teams/city.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; */
+    /* background-size: 50% 300%; */
+
+    
+    
+    img {
+        /* width: 100%;
+        height: 100%;
+        object-fit: cover;  */
+        /* height: 20vh;
+        width: 500px !important; */
+        /* height: 100vh;
+        width: 100vw; */
+    }
+    h1 {
+        font-family: font-urban;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        font-size: 40vw;
+        line-height: 1;
+        /* font-size: 100svw; */
+    }
+
+    /* 1279 -> HACERLA ESTÁTICA*/
+} 
+
+/* letter-spacing: 3vw; */
+
+.landing-img-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    overflow: hidden;
+
+    .landing-img{
+        width: 150vw;
+        height: 50%;
+        mask-image: linear-gradient(to top, transparent 5%, black 50%);
+    
+        @media (min-width: 768px) {
+            width: 100vw;
+            height: 70%;
+        }
+    }
+}
+
+
+.landing-teams-content{
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 40%;
+        right: 0%;
+    }
+}
+
+
+.landing-data-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    top: 22.5%;
+
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+
+    .landing-main-data{
+        h2 {
+            font-size: 1.3rem;
+            font-family: font-primary-black;
+
+            
+            @media (min-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+    
+        p {
+            font-size: 0.7rem;
+            @media (min-width: 768px) {
+                font-size: 1.4rem;
+            }
+        }
+        
+        h2, p {
+            margin: 0;
+        }
+    }
+
+    .landing-secondary-data{
+
+        width: 100%;
+
+        .landing-box {
+            background-color: rgba(106, 106, 105, 0.6);
+            border-radius: 10px;
+            padding: 0.75rem;
+            margin: 10px 0;
+            @media (min-width: 768px) {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+
+
+        .landing-box-title {
+            font-family: font-primary-semibold;
+        }
+
+
+        .landing-box-data {
+            margin: 0;
+            font-size: 2rem;
+            font-family: font-data;
+        }
+
+        
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+}
