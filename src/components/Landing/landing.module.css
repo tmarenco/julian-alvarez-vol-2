@@ -74,12 +74,11 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    /* background-color: blue; */
+    height: 90%;
+    margin: 1rem;
+    bottom: 0;
     justify-content: end;
     width: 55%;
-    /* top: 22.5%; */
-    /* top: 40vw; */
 
     @media (min-width: 768px) {
         width: 90%;
@@ -155,11 +154,15 @@
     .landing-icon {
         display: flex;
         justify-content: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
 
         img{
-            width: 50px;
+            width: 25px;
             cursor: pointer;
+
+            @media (min-width: 1024px) {
+                width: 50px;
+            }
         }
 
         .landing-mouse {
