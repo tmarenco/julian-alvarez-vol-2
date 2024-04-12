@@ -38,7 +38,6 @@ export const Landing = () => {
         >
           <div className={styles["landing-urban-content"]}>
             <h1 style={colorStyle}>ALVAREZ</h1>
-            {/* <img src="/src/assets/images/teams/city.svg" alt="" /> */}
           </div>
           <div className={styles["landing-img-content"]}>
             <img
@@ -51,20 +50,37 @@ export const Landing = () => {
             <Teams teamColor={"white"} direction={"column"} />
           </div>
           <div className={styles["landing-data-content"]}>
-            <div className={styles["landing-main-data"]}>
-              <h2>Julían Álvarez</h2>
-              <p>ARG</p>
-              <p>24 Y.0.</p>
-            </div>
-            <div className={styles["landing-secondary-data"]}>
-              {landingData.map((item) => (
-                <div key={item.title} className={styles["landing-box"]}>
-                  <p style={colorStyle} className={styles["landing-box-title"]}>
-                    {item.title.toUpperCase()}
-                  </p>
-                  <p className={styles["landing-box-data"]}>{item.data}</p>
-                </div>
-              ))}
+            <div className={styles["landing-data"]}>
+              <div className={styles["landing-main-data"]}>
+                <h2>Julían Álvarez</h2>
+                <p>ARG</p>
+                <p>24 Y.0.</p>
+              </div>
+              <div className={styles["landing-secondary-data"]}>
+                {landingData.map((item) => (
+                  <div key={item.title} className={styles["landing-box"]}>
+                    <p
+                      style={colorStyle}
+                      className={styles["landing-box-title"]}
+                    >
+                      {item.title.toUpperCase()}
+                    </p>
+                    <p className={styles["landing-box-data"]}>{item.data}</p>
+                  </div>
+                ))}
+              </div>
+              <div className={styles["landing-icon"]}>
+                <img
+                  className={styles["landing-arrow"]}
+                  src="/src/assets/images/icons/arrow-down-white.svg"
+                  alt="mouse"
+                />
+                <img
+                  className={styles["landing-mouse"]}
+                  src="/src/assets/images/icons/mouse-white.svg"
+                  alt="mouse"
+                />
+              </div>
             </div>
           </div>
         </motion.div>

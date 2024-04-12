@@ -15,44 +15,23 @@
     position: absolute;
     width: 100%;
     height: 20%;
-    background-color: blue;
     display: flex;
     justify-content: center;
-    /* container-type: inline-size;
-    resize: horizontal; */
-
-        /* background-image: url('/src/assets/images/teams/city.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover; */
-    /* background-size: 50% 300%; */
-
-    
-    
-    img {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover;  */
-        /* height: 20vh;
-        width: 500px !important; */
-        /* height: 100vh;
-        width: 100vw; */
-    }
+        
     h1 {
         font-family: font-urban;
-        height: auto;
-        width: 100%;
         text-align: center;
-        margin: 0;
-        font-size: 40vw;
+        font-size: 35vw;
         line-height: 1;
-        /* font-size: 100svw; */
-    }
+        letter-spacing: 0.3rem;
 
-    /* 1279 -> HACERLA ESTÁTICA*/
+
+        @media (min-width: 1280px) {
+            font-size: 450px;
+        }
+    }
 } 
 
-/* letter-spacing: 3vw; */
 
 .landing-img-content {
     position: absolute;
@@ -63,13 +42,17 @@
     overflow: hidden;
 
     .landing-img{
-        width: 150vw;
-        height: 50%;
-        mask-image: linear-gradient(to top, transparent 5%, black 50%);
+        height: 90vw;
+        mask-image: linear-gradient(to top, transparent 5%, black 60%);
     
         @media (min-width: 768px) {
-            width: 100vw;
-            height: 70%;
+            max-height: 1000px;
+            mask-image: linear-gradient(to top, transparent 20%, black 60%);
+        }
+
+        @media (min-width: 1280px) {
+            max-height: 1000px;
+            mask-image: linear-gradient(to top, transparent 25%, black 50%);
         }
     }
 }
@@ -81,7 +64,7 @@
     @media (min-width: 768px) {
         display: block;
         position: absolute;
-        top: 40%;
+        top: 35vh;
         right: 0%;
     }
 }
@@ -91,12 +74,21 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    /* background-color: blue; */
+    justify-content: end;
     width: 55%;
-    top: 22.5%;
+    /* top: 22.5%; */
+    /* top: 40vw; */
 
     @media (min-width: 768px) {
         width: 90%;
     }
+
+    @media (min-width: 1280px) {
+        max-width: 1100px;
+    }
+
 
     .landing-main-data{
         h2 {
@@ -126,7 +118,7 @@
         width: 100%;
 
         .landing-box {
-            background-color: rgba(106, 106, 105, 0.6);
+            background-color: rgba(68, 68, 68, 0.9);
             border-radius: 10px;
             padding: 0.75rem;
             margin: 10px 0;
@@ -158,4 +150,33 @@
         }
 
     }
+
+
+    .landing-icon {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+
+        img{
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .landing-mouse {
+            display: none;
+        }
+
+
+        @media (min-width: 1024px) {
+            .landing-mouse {
+                display: block;
+            }
+
+            .landing-arrow {
+                display: none;
+            }
+        }
+
+    }
+
 }
