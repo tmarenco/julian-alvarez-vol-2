@@ -10,7 +10,7 @@ const landingData = [
     data: "30.07.22",
   },
   {
-    title: "Goal Avergae",
+    title: "Goal Average",
     data: "0.34",
   },
   {

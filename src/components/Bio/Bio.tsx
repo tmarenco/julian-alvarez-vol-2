@@ -2,6 +2,29 @@ import { useContext } from "react";
 import styles from "./bio.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 
+const julianInfo = [
+  {
+    label: "Name",
+    value: "Julian 'Araña' Alvarez",
+  },
+  {
+    label: "Birth",
+    value: "31/01/100 | Calchín, Córdoba (ARG)",
+  },
+  {
+    label: "Nationality",
+    value: "Argentine",
+  },
+  {
+    label: "Height / Weight",
+    value: "1,70m | 71kg",
+  },
+  {
+    label: "Strong foot",
+    value: "Right",
+  },
+];
+
 export const Bio = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
@@ -11,26 +34,45 @@ export const Bio = () => {
 
   return (
     <>
-      <div className={styles["bio-container"]}>
+      <div id={"bio"} className={styles["bio-container"]}>
+        <div className={styles["bio-white-gradient"]}></div>
         <p className={styles["bio-background-text"]}>ÁLVAREZ</p>
         <div className={styles["bio-content"]}>
           <div className={styles["bio-data"]}>
             <div className={styles["bio-heading-data"]}>
               <div className={styles["bio-number"]}>
-                <h2>Number</h2>
-                <h1 style={colorStyle}>19 | 09</h1>
+                <p className={styles["bio-heading-title"]}>Number</p>
+                <p className={styles["bio-heading-info"]} style={colorStyle}>
+                  19|09
+                </p>
               </div>
               <div className={styles["bio-position"]}>
-                <h2>Position</h2>
-                <h1 style={colorStyle}>FWD</h1>
+                <p className={styles["bio-heading-title"]}>Position</p>
+                <p className={styles["bio-heading-info"]} style={colorStyle}>
+                  FWD
+                </p>
               </div>
             </div>
             <div className={styles["bio-text-data"]}>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Architecto totam aliquam aspernatur quasi impedit, quam tempore
-                iure ipsa id expedita suscipit inventore dicta.
+                iure ipsa id expedita suscipit inventore dicta. Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Architecto totam
+                aliquam aspernatur quasi impedit, quam tempore iure ipsa id
+                expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Architecto totam aliquam
+                aspernatur quasi impedit, quam tempore iure ipsa id expedita
+                suscipit inventore dicta.
               </p>
+            </div>
+            <div className={styles["bio-info-data"]}>
+              {julianInfo.map((info) => (
+                <div className={styles["bio-info-container"]} key={info.label}>
+                  <p className={styles["bio-info-label"]}>{info.label}</p>
+                  <p className={styles["bio-info-value"]}>{info.value}</p>
+                </div>
+              ))}
             </div>
           </div>
           <div className={styles["bio-image"]}>
