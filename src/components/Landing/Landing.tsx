@@ -23,7 +23,7 @@ export const Landing = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
   const colorStyle = {
-    color: `var(--color-${activeTeam.short})`,
+    color: `var(--color-primary-${activeTeam.short})`,
   };
 
   return (

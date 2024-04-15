@@ -42,7 +42,7 @@ export const Goals = () => {
   };
 
   const colorStyle = {
-    color: `var(--color-${activeTeam.short})`,
+    color: `var(--color-secondary-${activeTeam.short})`,
   };
 
   return (
@@ -84,6 +84,7 @@ export const Goals = () => {
                 renderValue={() => (season ? season : "Season")}
                 value={season}
                 sx={{
+                  height: "2rem",
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: colorStyle.color,
                   },
@@ -125,6 +126,7 @@ export const Goals = () => {
                 renderValue={() => (competition ? competition : "Competition")}
                 value={competition}
                 sx={{
+                  height: "2rem",
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: colorStyle.color,
                   },

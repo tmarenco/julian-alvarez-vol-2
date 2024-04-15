@@ -29,7 +29,7 @@ export const Bio = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
   const colorStyle = {
-    color: `var(--color-${activeTeam.short})`,
+    color: `var(--color-primary-${activeTeam.short})`,
   };
 
   return (
@@ -77,8 +77,8 @@ export const Bio = () => {
           </div>
           <div className={styles["bio-image"]}>
             <img
-              src="/src/assets/images/julian-home/julian-world-cup.png"
-              alt="julian-world-cup"
+              src={`/src/assets/images/julian-trophy/trophy-${activeTeam.short}.png`}
+              alt="julian-trophy"
             />
           </div>
         </div>

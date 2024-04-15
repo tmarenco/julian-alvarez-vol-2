@@ -22,7 +22,7 @@ export const Header = () => {
                   smooth={true}
                   duration={100}
                   key={option}
-                  offset={-10}
+                  offset={0}
                   activeClass={styles["header-option-active"]}
                 >
                   {option}
