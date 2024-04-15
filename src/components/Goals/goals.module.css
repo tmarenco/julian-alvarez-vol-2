@@ -1,0 +1,82 @@
+.goals-container {
+    position: relative;
+    background-color: var(--secondary-background);
+    color: var(--primary-background);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.goals-teams-filters-container {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .goals-teams-stats{
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    
+    
+        .goals-team-stat {
+            text-align: center;
+            width: 30%;
+        }
+    
+        .goals-team-separator {
+            border: solid var(--fields-background) 1px;
+            height: 100%;
+            margin-top: 10px;
+        }
+    
+    
+        .goals-team-value {
+            margin: 0;
+            font-family: font-data;
+            font-size: 4rem;
+            line-height: 0.5;
+            letter-spacing: -5px;
+        }
+    
+    
+    }
+    
+    .goals-teams-inputs{
+        margin-top: 1rem;
+        width: 100%;
+
+
+        .goals-select {
+            width: 100%;
+            background-color: var(--fields-background);
+            border: none;
+            margin-top: 10px;
+            font-family: font-primary-regular;
+        }
+    }
+}
+
+
+.goals-table {
+    width: 100%;
+    height: 45%;
+    background-color: var(--fields-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.goals-go-home {
+    height: 5%;
+}
