@@ -69,21 +69,18 @@ export const Landing = () => {
                   </div>
                 ))}
               </div>
-              <div className={styles["landing-icon"]}>
+              <div className={styles["landing-arrow"]}>
                 <img
-                  className={styles["landing-arrow"]}
                   src="/src/assets/images/icons/arrow-down-white.svg"
-                  alt="mouse"
-                />
-                <img
-                  className={styles["landing-mouse"]}
-                  src="/src/assets/images/icons/mouse-white.svg"
                   alt="mouse"
                 />
               </div>
             </div>
           </div>
         </motion.div>
+        <div className={styles["landing-mouse"]}>
+          <img src="/src/assets/images/icons/mouse-white.svg" alt="mouse" />
+        </div>
       </div>
     </>
   );
