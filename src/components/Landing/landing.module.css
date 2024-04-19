@@ -18,8 +18,17 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    /* max-height: 80%; */
     max-height: 700px;
     position: absolute;
+    
+
+    @media screen and (min-width: 768px) and (max-height: 918px) {
+        max-height: 75%;
+    }
+
+
+
 }
 
 .landing-urban-content {
@@ -35,9 +44,15 @@
         font-size: 35vw;
         line-height: 1;
         letter-spacing: 0.3rem;
+        mask-image: radial-gradient(circle at 50% 60%, black 60%, rgba(0, 0, 0, 0.6) 80%);
+
 
         @media (min-width: 1280px) {
             font-size: 450px;
+        }
+
+        @media screen and (min-width: 768px) and (max-height: 918px) {
+         font-size: 300px;
         }
     }
 }
@@ -63,6 +78,10 @@
 
         @media (min-width: 1280px) {
             mask-image: linear-gradient(to top, transparent 25%, black 60%);
+        }
+
+        @media screen and (min-width: 768px) and (max-height: 918px) {
+            max-height: 600px;
         }
     }
 }
@@ -101,6 +120,10 @@
 
     @media (min-width: 1280px) {
         max-width: 1100px;
+    }
+
+    @media screen and (min-width: 768px) and (max-height: 918px) {
+        max-width: 700px;
     }
 
 

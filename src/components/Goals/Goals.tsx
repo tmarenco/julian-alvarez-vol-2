@@ -178,8 +178,12 @@ export const Goals = () => {
             />
           </div>
         </div>
-        <div className={styles["goals-table"]}></div>
-        <div className={styles["goals-go-home"]}>Go to Home</div>
+        <div className={styles["goals-table-container"]}></div>
+        <div className={styles["goals-go-home-container"]}>
+          <div className={styles["goals-go-home-content"]}>
+            <p>Go to Home ^</p>
+          </div>
+        </div>
       </div>
     </>
   );

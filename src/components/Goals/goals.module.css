@@ -67,9 +67,9 @@
 }
 
 
-.goals-table {
+.goals-table-container {
     width: 100%;
-    height: 45%;
+    height: 50%;
     background-color: var(--fields-background);
     display: flex;
     flex-direction: column;
@@ -78,6 +78,35 @@
 }
 
 
-.goals-go-home {
+.goals-go-home-container {
     height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .goals-go-home-content {
+        border: solid  rgb(151, 151, 151) 1px;
+        border-radius: 5px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            border: none;    
+        }
+
+
+
+        p {
+            text-decoration: underline;
+            color: rgb(151, 151, 151);
+            cursor: pointer;
+            height: 100%;
+            place-content: center;
+            margin: 0;
+        }
+
+
+    }
 }
