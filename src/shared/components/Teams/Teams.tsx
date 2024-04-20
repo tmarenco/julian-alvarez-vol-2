@@ -23,7 +23,11 @@ export const Teams = ({ teamColor, direction }: Props) => {
                 ? styles["selected-team"]
                 : styles["non-selected-team"]
             }
-            ${direction === "column" ? "mb-3" : 'styles["non-selected-team"]'}
+            ${
+              direction === "column"
+                ? styles["team-column"]
+                : styles["team-row"]
+            }
             
             `}
             src={`/src/assets/images/teams/${team.short}-${teamColor}.svg`}
