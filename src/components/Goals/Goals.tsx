@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Teams } from "../../shared/components/Teams/Teams";
 import styles from "./goals.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
@@ -6,10 +6,9 @@ import {
   Checkbox,
   FormControl,
   FormControlLabel,
-  InputLabel,
-  Menu,
   MenuItem,
   Select,
+  SvgIcon,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -23,12 +22,38 @@ const seasons = [
 ];
 
 const competitions = [
-  "Copa Libertadores",
-  "Copa Argentina",
-  "Liga de Fútbol Profesional",
-  "Champions League",
-  "Premier League",
-  "FA Cup",
+  {
+    name: "Copa Libertadores",
+    value: "copa-libertadores",
+  },
+  {
+    name: "Copa Argentina",
+    value: "copa-argentina",
+  },
+  {
+    name: "Liga de Fútbol Profesional",
+    value: "liga-argentina",
+  },
+  {
+    name: "Superliga Argentina",
+    value: "superliga-argentina",
+  },
+  {
+    name: "Champions League",
+    value: "champions-league",
+  },
+  {
+    name: "Premier League",
+    value: "premier-league",
+  },
+  {
+    name: "FA Cup",
+    value: "fa-cup",
+  },
+  {
+    name: "EFL Cup",
+    value: "efl-cup",
+  },
 ];
 
 export const Goals = () => {
@@ -123,7 +148,14 @@ export const Goals = () => {
               <Select
                 IconComponent={ExpandMoreIcon}
                 displayEmpty={true}
-                renderValue={() => (competition ? competition : "Competition")}
+                renderValue={() =>
+                  competition
+                    ? competitions.find((comp) => comp.value === competition)
+                      ? competitions.find((comp) => comp.value === competition)
+                          ?.name
+                      : "All"
+                    : "Competition"
+                }
                 value={competition}
                 sx={{
                   height: "2rem",
@@ -141,18 +173,18 @@ export const Goals = () => {
                 onChange={(e) => setCompetition(e.target.value as string)}
               >
                 <MenuItem
-                  value={"All"}
+                  value={"all"}
                   sx={{ fontFamily: "font-primary-regular" }}
                 >
                   All
                 </MenuItem>
                 {competitions.map((competition) => (
                   <MenuItem
-                    key={competition}
-                    value={competition}
+                    key={competition.value}
+                    value={competition.value}
                     sx={{ fontFamily: "font-primary-regular" }}
                   >
-                    {competition}
+                    {competition.name}
                   </MenuItem>
                 ))}
               </Select>
@@ -167,6 +199,20 @@ export const Goals = () => {
                       color: colorStyle.color,
                     },
                   }}
+                  icon={
+                    <SvgIcon>
+                      <svg
+                        focusable="false"
+                        aria-hidden="true"
+                        data-testid="CheckBoxBlankIcon"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5"
+                          fill="var(--fields-background)"
+                        ></path>
+                      </svg>
+                    </SvgIcon>
+                  }
                 />
               }
               label="Favorites"
@@ -178,7 +224,22 @@ export const Goals = () => {
             />
           </div>
         </div>
-        <div className={styles["goals-table-container"]}></div>
+        <div className={styles["goals-table-container"]}>
+          <div className={styles["goals-table-content"]}>
+            <div
+              className={styles["goals-table-background-image"]}
+              style={{
+                backgroundImage:
+                  competition !== "" && competition !== "all"
+                    ? `url(/src/assets/images/competitions/${competition}-logo.svg)`
+                    : "none",
+              }}
+            ></div>
+            <div className={styles["goals-table"]}>
+              <h1>Table Content</h1>
+            </div>
+          </div>
+        </div>
         <div className={styles["goals-go-home-container"]}>
           <div className={styles["goals-go-home-content"]}>
             <p>Go to Home ^</p>
