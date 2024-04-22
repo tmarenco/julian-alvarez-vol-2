@@ -1,0 +1,58 @@
+.table-container {
+    height: 100%;
+
+    .table-item {
+        height: 25%;
+        padding: 1rem 2rem;
+        border-bottom: solid 1px #b8b6b6;
+
+        @media (min-width: 768px) {
+            height: 18%;
+            border-top: solid 1px #b8b6b6;
+        }
+
+
+        .table-competition{
+            font-family: font-primary-bold;
+        }
+
+        .table-match-detail{
+            opacity: 25%;
+        }
+
+    }
+}
+
+
+
+.table-mobile-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span, p {
+        margin: 0;
+    }
+}
+
+
+.table-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background);
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    p {
+        font-size: 12px;
+    }
+
+
+    svg {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+}

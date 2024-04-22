@@ -1,0 +1,34 @@
+.team-result-container{
+    display: flex;
+    place-items: center;
+
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .result-container {
+        margin-left: 1rem;
+        p{
+            margin: 0;
+        }
+
+
+        .result-content {
+            display: flex;
+
+
+            .team {
+                width: 150px;
+                font-family: font-primary-bold;
+            }
+
+            .score {
+                font-family: font-primary-semibold;
+            }
+
+
+        }
+    }
+}

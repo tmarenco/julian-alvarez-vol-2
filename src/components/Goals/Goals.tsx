@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Teams } from "../../shared/components/Teams/Teams";
+// import { TableDesktop } from "../Tables/components/TableDesktop";
 import styles from "./goals.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 import {
@@ -11,6 +12,8 @@ import {
   SvgIcon,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { TableDesktop } from "../Tables/components/TableDesktop";
+import { TableMobile } from "../Tables/components/TableMobile";
 
 const seasons = [
   "2018/2019",
@@ -236,7 +239,12 @@ export const Goals = () => {
               }}
             ></div>
             <div className={styles["goals-table"]}>
-              <h1>Table Content</h1>
+              <div className={styles["table-desktop"]}>
+                <TableDesktop />
+              </div>
+              <div className={styles["table-mobile"]}>
+                <TableMobile />
+              </div>
             </div>
           </div>
         </div>
