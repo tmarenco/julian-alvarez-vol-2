@@ -2,7 +2,7 @@ import styles from "./tables.module.css";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { TeamResult } from "../shared/components/TeamResult/TeamResult";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { WatchButton } from "../shared/components/WatchButton/WatchButton";
 
 export const TableMobile = () => {
   return (
@@ -21,12 +21,9 @@ export const TableMobile = () => {
               <FavoriteIcon style={{ opacity: "10%", cursor: "pointer" }} />
             </div>
           </div>
-          <div className={styles["table-mobile-row"]}>
+          <div className={`${styles["table-mobile-row"]} mt-2`}>
             <TeamResult />
-            <div className={styles["table-button-container"]}>
-              <p>Watch Goal</p>
-              <PlayArrowIcon style={{ color: "white" }} />
-            </div>
+            <WatchButton />
           </div>
         </div>
       </div>

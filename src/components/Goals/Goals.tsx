@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Teams } from "../../shared/components/Teams/Teams";
-// import { TableDesktop } from "../Tables/components/TableDesktop";
 import styles from "./goals.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 import {

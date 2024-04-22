@@ -1,23 +1,36 @@
 .table-container {
     height: 100%;
+    overflow-y: auto;
 
     .table-item {
         height: 25%;
         padding: 1rem 2rem;
         border-bottom: solid 1px #b8b6b6;
+        min-height: 110px;
+        justify-content: center;
 
         @media (min-width: 768px) {
             height: 18%;
+            min-height: 70px;
             border-top: solid 1px #b8b6b6;
+            display: flex;
+        }
+
+        @media screen and (min-width: 768px) and (min-height: 750px) {
+            min-height:auto;
         }
 
 
         .table-competition{
             font-family: font-primary-bold;
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         .table-match-detail{
+            font-size: 0.9rem;
             opacity: 25%;
+            margin: 0;
         }
 
     }
@@ -36,23 +49,35 @@
 }
 
 
-.table-button-container{
+.table-item-desktop-content{
     display: flex;
+    width: 100%;
+    max-width: 1600px;
+}
+
+
+.table-desktop-icon-container{
+    width: 10%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-background);
-    padding: 8px 10px;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+}
 
-    p {
-        font-size: 12px;
+.table-desktop-items-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+
+    .table-desktop-competition-container{
+        display: flex;
     }
+}
 
 
-    svg {
-        margin-left: 10px;
-        font-size: 1rem;
-    }
+.table-desktop-competition-border {
+    border-right: solid 3px black;
+    margin-right: 2rem;
 }

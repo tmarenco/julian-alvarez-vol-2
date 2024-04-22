@@ -1,0 +1,32 @@
+.table-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background);
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        color: var(--primary-background);
+        background-color: var(--logos-color);
+    }
+
+    p {
+        font-size: 12px;
+        font-family: font-primary-semibold;
+        margin: 0;
+    }
+
+
+    svg {
+        margin-left: 10px;
+        font-size: 1rem;
+        color: white;
+
+        @media (min-width: 768px) {
+            color: var(--primary-background);
+        }
+    }
+}
