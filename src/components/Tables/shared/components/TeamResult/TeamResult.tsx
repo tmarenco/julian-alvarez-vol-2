@@ -1,8 +1,13 @@
 import styles from "./team-result.module.css";
 import { useContext } from "react";
 import { ActiveTeamContext } from "../../../../../context/active-team/active-team.context";
+import { GoalInterface } from "../../../../../interfaces/goal-interface";
 
-export const TeamResult = () => {
+interface Props {
+  result: Partial<GoalInterface>;
+}
+
+export const TeamResult = ({ result }: Props) => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
   const colorStyle = {
@@ -17,17 +22,21 @@ export const TeamResult = () => {
           alt={`${activeTeam.short}.svg`}
         />
         <div className={styles["result-container"]}>
-          <div className={styles["result-content"]}>
-            <p className={styles["team"]} style={colorStyle}>
-              Manchester City
-            </p>
-            <p className={styles["score"]} style={colorStyle}>
-              1
-            </p>
+          <div
+            className={styles["result-content"]}
+            style={{
+              color:
+                result && result.julianGoal! > result.rivalGoal!
+                  ? colorStyle.color
+                  : "var(--primary-background)",
+            }}
+          >
+            <p className={styles["team"]}>{result?.team}</p>
+            <p className={styles["score"]}>{result?.julianGoal}</p>
           </div>
           <div className={styles["result-content"]}>
-            <p className={styles["team"]}>Manchester United</p>
-            <p className={styles["score"]}>1</p>
+            <p className={styles["team"]}>{result?.rival}</p>
+            <p className={styles["score"]}>{result?.rivalGoal}</p>
           </div>
         </div>
       </div>

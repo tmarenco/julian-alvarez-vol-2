@@ -1,4 +1,4 @@
-export interface Goal {
+export interface GoalInterface {
     team: string
     rival: string
     julianGoal: number 

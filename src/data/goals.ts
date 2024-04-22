@@ -1,7 +1,7 @@
-import { Goal } from "../interfaces/goal-interface";
+import { GoalInterface } from "../interfaces/goal-interface";
 
 
-export const goals: Goal[] = [
+export const goals: GoalInterface[] = [
     {
         team: "River Plate",
         rival: "Independiente",
@@ -211,7 +211,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Ecuador",
         julianGoal: 1, 
         rivalGoal: 1,
@@ -224,7 +224,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Jamaica",
         julianGoal: 3, 
         rivalGoal: 0,
@@ -237,7 +237,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "United Arab Emirates",
         julianGoal: 5, 
         rivalGoal: 0,
@@ -250,7 +250,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Poland",
         julianGoal: 2, 
         rivalGoal: 0,
@@ -263,7 +263,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Australia",
         julianGoal: 2, 
         rivalGoal: 1,
@@ -276,7 +276,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Croatia",
         julianGoal: 3, 
         rivalGoal: 0,
@@ -289,7 +289,7 @@ export const goals: Goal[] = [
         videoLink: ""
     },
     {
-        team: "Argentina National Team",
+        team: "Argentina",
         rival: "Croatia",
         julianGoal: 3, 
         rivalGoal: 0,

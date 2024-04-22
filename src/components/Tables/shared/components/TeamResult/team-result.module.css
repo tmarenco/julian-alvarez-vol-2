@@ -12,7 +12,16 @@
         margin-left: 1rem;
         p{
             margin: 0;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+
+            @media (min-width: 414px) {
+                font-size: 0.8rem;
+            }
+
+            
+            @media (min-width: 768px) {
+                font-size: 0.9rem;
+            }
         }
 
 
@@ -23,6 +32,9 @@
             .team {
                 width: 120px;
                 font-family: font-primary-bold;
+                @media (min-width: 414px) {
+                    width: 150px;
+                }
             }
 
             .score {

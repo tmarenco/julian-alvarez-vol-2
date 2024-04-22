@@ -43,7 +43,7 @@ export const Bio = () => {
               <div className={styles["bio-number"]}>
                 <p className={styles["bio-heading-title"]}>Number</p>
                 <p className={styles["bio-heading-info"]} style={colorStyle}>
-                  19|09
+                  {activeTeam.number}
                 </p>
               </div>
               <div className={styles["bio-position"]}>

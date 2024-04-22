@@ -23,17 +23,40 @@
 
         .table-competition{
             font-family: font-primary-bold;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             margin: 0;
+
+            @media (min-width: 768px) {
+                font-size: 0.9rem;
+            }
         }
 
         .table-match-detail{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             opacity: 25%;
             margin: 0;
+            @media (min-width: 768px) {
+                font-size: 0.9rem;
+            }
         }
 
     }
+}
+
+.table-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: var(--secondary-background);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-background);
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 
@@ -73,6 +96,7 @@
 
     .table-desktop-competition-container{
         display: flex;
+        width: 25%;
     }
 }
 

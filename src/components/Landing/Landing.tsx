@@ -4,21 +4,6 @@ import { ActiveTeamContext } from "../../context/active-team/active-team.context
 import { motion } from "framer-motion";
 import { Teams } from "../../shared/components/Teams/Teams";
 
-const landingData = [
-  {
-    title: "Debut",
-    data: "30.07.22",
-  },
-  {
-    title: "Goal Average",
-    data: "0.34",
-  },
-  {
-    title: "Titles",
-    data: "5",
-  },
-];
-
 export const Landing = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
@@ -26,15 +11,30 @@ export const Landing = () => {
     color: `var(--color-primary-${activeTeam.short})`,
   };
 
+  const landingData = [
+    {
+      title: "Debut",
+      data: activeTeam.debut,
+    },
+    {
+      title: "Goal Average",
+      data: (activeTeam.goals / activeTeam.matches).toFixed(2),
+    },
+    {
+      title: "Titles",
+      data: activeTeam.titles,
+    },
+  ];
+
   return (
     <>
       <div className={styles["landing-container"]}>
         <motion.div
           className={styles.landing}
           key={activeTeam.team}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.75 }}
         >
           <div className={styles["landing-urban-content"]}>
             <h1 style={colorStyle}>ALVAREZ</h1>
