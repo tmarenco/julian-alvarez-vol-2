@@ -7,7 +7,7 @@ export const goals: GoalInterface[] = [
         rival: "Independiente",
         julianGoal: 3, 
         rivalGoal: 0,
-        competition: "Liga Profesional de Fútbol",
+        competition: "Liga Profesional de Futbol",
         season: "2018/2019",
         matchDetail: "Matchday 23",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",

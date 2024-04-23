@@ -5,11 +5,11 @@ import { ActiveTeamContext } from "../../context/active-team/active-team.context
 const julianInfo = [
   {
     label: "Name",
-    value: "Julian 'Araña' Alvarez",
+    value: "Julián 'Araña' Álvarez",
   },
   {
     label: "Birth",
-    value: "31/01/100 | Calchín, Córdoba (ARG)",
+    value: "31/01/2000 | Calchín, Córdoba (ARG)",
   },
   {
     label: "Nationality",

@@ -16,50 +16,6 @@ import { TableMobile } from "../Tables/components/TableMobile";
 import { goals } from "../../data/goals";
 import { motion } from "framer-motion";
 
-const seasons = [
-  "2018/2019",
-  "2019/2020",
-  "2020/2021",
-  "2021/2022",
-  "2022/2023",
-  "2023/2024",
-];
-
-const competitions = [
-  {
-    name: "Copa Libertadores",
-    value: "copa-libertadores",
-  },
-  {
-    name: "Copa Argentina",
-    value: "copa-argentina",
-  },
-  {
-    name: "Liga de Fútbol Profesional",
-    value: "liga-argentina",
-  },
-  {
-    name: "Superliga Argentina",
-    value: "superliga-argentina",
-  },
-  {
-    name: "Champions League",
-    value: "champions-league",
-  },
-  {
-    name: "Premier League",
-    value: "premier-league",
-  },
-  {
-    name: "FA Cup",
-    value: "fa-cup",
-  },
-  {
-    name: "EFL Cup",
-    value: "efl-cup",
-  },
-];
-
 export const Goals = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
@@ -68,6 +24,21 @@ export const Goals = () => {
   const [activeTeamGoals, setActiveTeamGoals] = useState(
     goals.filter((goal) => goal.team === activeTeam.team)
   );
+  const [seasons, setSeasons] = useState([
+    ...new Set(
+      goals
+        .filter((goal) => goal.team === activeTeam.team)
+        .map((goal) => goal.season)
+    ),
+  ]);
+
+  const [competitions, setCompetitions] = useState([
+    ...new Set(
+      goals
+        .filter((goal) => goal.team === activeTeam.team)
+        .map((goal) => goal.competition)
+    ),
+  ]);
 
   const [filteredGoals, setFilteredGoals] = useState(activeTeamGoals);
 
@@ -81,9 +52,51 @@ export const Goals = () => {
 
   useEffect(() => {
     setActiveTeamGoals(goals.filter((goal) => goal.team === activeTeam.team));
-    setSeason("");
-    setCompetition("");
+    setFilteredGoals(goals.filter((goal) => goal.team === activeTeam.team));
+    seasonSetter();
+    competitionSetter();
   }, [activeTeam]);
+
+  const seasonSetter = () => {
+    setSeason("");
+    setSeasons([
+      ...new Set(
+        goals
+          .filter((goal) => goal.team === activeTeam.team)
+          .map((goal) => goal.season)
+      ),
+    ]);
+  };
+
+  const competitionSetter = () => {
+    setCompetition("");
+    setCompetitions([
+      ...new Set(
+        goals
+          .filter((goal) => goal.team === activeTeam.team)
+          .map((goal) => goal.competition)
+      ),
+    ]);
+  };
+
+  useEffect(() => {
+    const selectedCompetition =
+      competitions.find((comp) => comp === competition) ?? "";
+    const selectedSeason =
+      seasons.find((seasonItem) => seasonItem === season) ?? "";
+
+    setFilteredGoals(
+      activeTeamGoals.filter(
+        (goal) =>
+          (selectedSeason === ""
+            ? goal.season !== selectedSeason
+            : goal.season === selectedSeason) &&
+          (selectedCompetition === ""
+            ? goal.competition !== selectedCompetition
+            : goal.competition === selectedCompetition)
+      )
+    );
+  }, [season, competition]);
 
   return (
     <>
@@ -179,10 +192,8 @@ export const Goals = () => {
                   displayEmpty={true}
                   renderValue={() =>
                     competition
-                      ? competitions.find((comp) => comp.value === competition)
-                        ? competitions.find(
-                            (comp) => comp.value === competition
-                          )?.name
+                      ? competitions.find((comp) => comp === competition)
+                        ? competitions.find((comp) => comp === competition)
                         : "All"
                       : "Competition"
                   }
@@ -210,11 +221,11 @@ export const Goals = () => {
                   </MenuItem>
                   {competitions.map((competition) => (
                     <MenuItem
-                      key={competition.value}
-                      value={competition.value}
+                      key={competition}
+                      value={competition}
                       sx={{ fontFamily: "font-primary-regular" }}
                     >
-                      {competition.name}
+                      {competition}
                     </MenuItem>
                   ))}
                 </Select>
@@ -261,7 +272,9 @@ export const Goals = () => {
                 style={{
                   backgroundImage:
                     competition !== "" && competition !== "all"
-                      ? `url(/src/assets/images/competitions/${competition}-logo.svg)`
+                      ? `url(/src/assets/images/competitions/${competition
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}-logo.svg)`
                       : "none",
                 }}
               ></div>

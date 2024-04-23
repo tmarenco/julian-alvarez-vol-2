@@ -3,10 +3,12 @@ import styles from "./landing.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 import { motion } from "framer-motion";
 import { Teams } from "../../shared/components/Teams/Teams";
+import { calculateAge } from "../../utils/calculateAge";
+
+const julianAge = calculateAge("31/01/2000");
 
 export const Landing = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
-
   const colorStyle = {
     color: `var(--color-primary-${activeTeam.short})`,
   };
@@ -54,7 +56,7 @@ export const Landing = () => {
               <div className={styles["landing-main-data"]}>
                 <h2>Julían Álvarez</h2>
                 <p>ARG</p>
-                <p>24 Y.0.</p>
+                <p>{julianAge} Y.0.</p>
               </div>
               <div className={styles["landing-secondary-data"]}>
                 {landingData.map((item) => (
