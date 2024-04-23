@@ -54,7 +54,7 @@ export const Landing = () => {
           <div className={styles["landing-data-content"]}>
             <div className={styles["landing-data"]}>
               <div className={styles["landing-main-data"]}>
-                <h2>Julían Álvarez -TEST</h2>
+                <h2>Julían Álvarez</h2>
                 <p>ARG</p>
                 <p>{julianAge} Y.0.</p>
               </div>
