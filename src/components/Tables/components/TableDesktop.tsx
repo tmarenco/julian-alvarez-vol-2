@@ -6,9 +6,15 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 interface Props {
   goals: GoalInterface[];
+  favoriteGoals: GoalInterface[];
+  handleFavorite: (goal: GoalInterface) => void;
 }
 
-export const TableDesktop = ({ goals }: Props) => {
+export const TableDesktop = ({
+  goals,
+  favoriteGoals,
+  handleFavorite,
+}: Props) => {
   return (
     <>
       <div className={styles["table-container"]}>
@@ -16,7 +22,17 @@ export const TableDesktop = ({ goals }: Props) => {
           <div key={index} className={styles["table-item"]}>
             <div className={styles["table-item-desktop-content"]}>
               <div className={styles["table-desktop-icon-container"]}>
-                <FavoriteIcon style={{ opacity: "10%", cursor: "pointer" }} />
+                <FavoriteIcon
+                  style={{
+                    opacity: favoriteGoals.find(
+                      (fav) => fav.order === goal.order
+                    )
+                      ? "100%"
+                      : "10%",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleFavorite(goal)}
+                />
               </div>
               <div className={styles["table-desktop-items-container"]}>
                 <div className={styles["table-desktop-competition-container"]}>

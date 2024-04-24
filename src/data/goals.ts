@@ -3,6 +3,7 @@ import { GoalInterface } from "../interfaces/goal-interface";
 
 export const goals: GoalInterface[] = [
     {
+        order: 1,
         team: "River Plate",
         rival: "Independiente",
         julianGoal: 3, 
@@ -16,6 +17,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 2,
         team: "River Plate",
         rival: "Internacional",
         julianGoal: 2, 
@@ -29,6 +31,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 3,
         team: "River Plate",
         rival: "Central Córdoba",
         julianGoal: 3, 
@@ -42,6 +45,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 4,
         team: "River Plate",
         rival: "San Pablo",
         julianGoal: 2, 
@@ -55,6 +59,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 5,
         team: "River Plate",
         rival: "Dep. Binacional",
         julianGoal: 6, 
@@ -68,6 +73,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 6,
         team: "River Plate",
         rival: "San Pablo",
         julianGoal: 2, 
@@ -81,6 +87,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 7,
         team: "River Plate",
         rival: "San Pablo",
         julianGoal: 2, 
@@ -94,6 +101,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 8,
         team: "River Plate",
         rival: "LDU Quito",
         julianGoal: 3, 
@@ -107,6 +115,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 9,
         team: "Manchester City",
         rival: "Liverpool",
         julianGoal: 1, 
@@ -120,6 +129,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 10,
         team: "Manchester City",
         rival: "Nottingham Forest",
         julianGoal: 6, 
@@ -133,6 +143,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 11,
         team: "Manchester City",
         rival: "Nottingham Forest",
         julianGoal: 6, 
@@ -146,6 +157,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 12,
         team: "Manchester City",
         rival: "FC Copenhague",
         julianGoal: 5, 
@@ -159,6 +171,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 13,
         team: "Manchester City",
         rival: "Sevilla",
         julianGoal: 3, 
@@ -172,6 +185,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 14,
         team: "Manchester City",
         rival: "Fullham",
         julianGoal: 2, 
@@ -185,6 +199,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 15,
         team: "Manchester City",
         rival: "Chelsea",
         julianGoal: 2, 
@@ -198,6 +213,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 16,
         team: "Manchester City",
         rival: "Chelsea",
         julianGoal: 4, 
@@ -211,6 +227,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 17,
         team: "Argentina",
         rival: "Ecuador",
         julianGoal: 1, 
@@ -224,6 +241,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 18,
         team: "Argentina",
         rival: "Jamaica",
         julianGoal: 3, 
@@ -237,6 +255,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 19,
         team: "Argentina",
         rival: "United Arab Emirates",
         julianGoal: 5, 
@@ -250,6 +269,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 20,
         team: "Argentina",
         rival: "Poland",
         julianGoal: 2, 
@@ -263,6 +283,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 21,
         team: "Argentina",
         rival: "Australia",
         julianGoal: 2, 
@@ -276,6 +297,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 22,
         team: "Argentina",
         rival: "Croatia",
         julianGoal: 3, 
@@ -289,6 +311,7 @@ export const goals: GoalInterface[] = [
         videoLink: ""
     },
     {
+        order: 23,
         team: "Argentina",
         rival: "Croatia",
         julianGoal: 3, 
