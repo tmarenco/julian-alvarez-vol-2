@@ -7,9 +7,15 @@ import { GoalInterface } from "../../../interfaces/goal-interface";
 
 interface Props {
   goals: GoalInterface[];
+  favoriteGoals: GoalInterface[];
+  handleFavorite: (goal: GoalInterface) => void;
 }
 
-export const TableMobile = ({ goals }: Props) => {
+export const TableMobile = ({
+  goals,
+  favoriteGoals,
+  handleFavorite,
+}: Props) => {
   return (
     <>
       <div className={styles["table-container"]}>
@@ -27,7 +33,17 @@ export const TableMobile = ({ goals }: Props) => {
               </p>
               <div>
                 <ShareIcon style={{ cursor: "pointer" }} />
-                <FavoriteIcon style={{ opacity: "10%", cursor: "pointer" }} />
+                <FavoriteIcon
+                  style={{
+                    opacity: favoriteGoals.find(
+                      (fav) => fav.order === goal.order
+                    )
+                      ? "100%"
+                      : "10%",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleFavorite(goal)}
+                />
               </div>
             </div>
             <div className={`${styles["table-mobile-row"]} mt-2`}>

@@ -15,15 +15,23 @@ import { TableDesktop } from "../Tables/components/TableDesktop";
 import { TableMobile } from "../Tables/components/TableMobile";
 import { goals } from "../../data/goals";
 import { motion } from "framer-motion";
+import { GoalInterface } from "../../interfaces/goal-interface";
 
 export const Goals = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
 
+  const colorStyle = {
+    color: `var(--color-secondary-${activeTeam.short})`,
+  };
+
   const [season, setSeason] = useState("");
+  const [favoriteCheckbox, setFavoriteCheckbox] = useState(false);
   const [competition, setCompetition] = useState("");
   const [activeTeamGoals, setActiveTeamGoals] = useState(
     goals.filter((goal) => goal.team === activeTeam.team)
   );
+  const [favoriteGoals, setFavoriteGoals] = useState<GoalInterface[]>([]);
+
   const [seasons, setSeasons] = useState([
     ...new Set(
       goals
@@ -43,19 +51,44 @@ export const Goals = () => {
   const [filteredGoals, setFilteredGoals] = useState(activeTeamGoals);
 
   const showFavorites = (checked: boolean) => {
-    console.log(checked);
-  };
+    setFavoriteCheckbox(checked);
+    //*OPTION 1: Show only the favorites without the other filters.
+    //TODO: Set the filters to the default value here
+    //TODO: When the other filters change, change the favorite to false
+    // setFilteredGoals(
+    //   checked
+    //     ? favoriteGoals.filter((fav) => fav.team === activeTeam.team)
+    //     : activeTeamGoals
+    // );
 
-  const colorStyle = {
-    color: `var(--color-secondary-${activeTeam.short})`,
+    //*OPTION 2: Show only the favorites for the current filters.
+    checked
+      ? setFilteredGoals(
+          filteredGoals.filter((item) => {
+            return favoriteGoals.some((favoriteItem) => {
+              return favoriteItem.order === item.order;
+            });
+          })
+        )
+      : filterGoals();
   };
 
   useEffect(() => {
     setActiveTeamGoals(goals.filter((goal) => goal.team === activeTeam.team));
     setFilteredGoals(goals.filter((goal) => goal.team === activeTeam.team));
+    setFavoriteCheckbox(false);
     seasonSetter();
     competitionSetter();
   }, [activeTeam]);
+
+  useEffect(() => {
+    filterGoals();
+    setFavoriteCheckbox(false);
+  }, [season, competition]);
+
+  useEffect(() => {
+    getStorageData();
+  }, []);
 
   const seasonSetter = () => {
     setSeason("");
@@ -79,7 +112,7 @@ export const Goals = () => {
     ]);
   };
 
-  useEffect(() => {
+  const filterGoals = () => {
     const selectedCompetition =
       competitions.find((comp) => comp === competition) ?? "";
     const selectedSeason =
@@ -96,7 +129,24 @@ export const Goals = () => {
             : goal.competition === selectedCompetition)
       )
     );
-  }, [season, competition]);
+  };
+
+  const getStorageData = () => {
+    const storage = localStorage.getItem("favoriteGoals");
+    setFavoriteGoals(storage ? JSON.parse(storage) : []);
+  };
+
+  const handleFavorite = (goal: GoalInterface) => {
+    const updatedFavoriteGoals = [...favoriteGoals];
+    const isFavoriteIndex = updatedFavoriteGoals.findIndex(
+      (favorite) => favorite.order === goal.order
+    );
+    isFavoriteIndex !== -1
+      ? updatedFavoriteGoals.splice(isFavoriteIndex, 1)
+      : updatedFavoriteGoals.push(goal);
+    setFavoriteGoals(updatedFavoriteGoals);
+    localStorage.setItem("favoriteGoals", JSON.stringify(updatedFavoriteGoals));
+  };
 
   return (
     <>
@@ -234,6 +284,8 @@ export const Goals = () => {
                 control={
                   <Checkbox
                     onChange={(e) => showFavorites(e.target.checked)}
+                    checked={favoriteCheckbox}
+                    value={favoriteCheckbox}
                     sx={{
                       color: "var(--fields-background)",
                       "&.Mui-checked": {
@@ -280,10 +332,18 @@ export const Goals = () => {
               ></div>
               <div className={styles["goals-table"]}>
                 <div className={styles["table-desktop"]}>
-                  <TableDesktop goals={filteredGoals} />
+                  <TableDesktop
+                    goals={filteredGoals}
+                    favoriteGoals={favoriteGoals}
+                    handleFavorite={handleFavorite}
+                  />
                 </div>
                 <div className={styles["table-mobile"]}>
-                  <TableMobile goals={filteredGoals} />
+                  <TableMobile
+                    goals={filteredGoals}
+                    favoriteGoals={favoriteGoals}
+                    handleFavorite={handleFavorite}
+                  />
                 </div>
               </div>
             </div>
