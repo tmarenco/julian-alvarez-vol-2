@@ -56,7 +56,7 @@ export const TableDesktop = ({
                     rivalGoal: goal.rivalGoal,
                   }}
                 />
-                <WatchButton />
+                <WatchButton goal={goal} />
               </div>
             </div>
           </div>
