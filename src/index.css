@@ -4,4 +4,21 @@
 
 body {
     font-family: font-primary-regular;
+
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: var(--secondary-background);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--primary-background);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
 }

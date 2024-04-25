@@ -55,7 +55,7 @@ export const TableMobile = ({
                   rivalGoal: goal.rivalGoal,
                 }}
               />
-              <WatchButton />
+              <WatchButton goal={goal} />
             </div>
           </div>
         ))}
