@@ -5,9 +5,14 @@ import { teams } from "../../data/teams";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Button } from "@mui/material";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HeaderOptionsContext } from "../../context/header-options/header-options.context";
 import { headerGoalPage } from "../../data/header";
+import {
+  getLocalStorage,
+  setLocalStorage,
+} from "../../utils/handleLocalStorage";
+import { GoalInterface } from "../../interfaces/goal-interface";
 export const GoalPage = () => {
   const { setHeaderOptions } = useContext(HeaderOptionsContext);
 
@@ -17,6 +22,16 @@ export const GoalPage = () => {
   const navigate = useNavigate();
 
   const activeGoal = goals.find((goal) => goal.order === Number(id));
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    setIsFavorite(
+      !!(getLocalStorage() as GoalInterface[]).find(
+        (fav) => fav.order === activeGoal?.order
+      )
+    );
+  }, [activeGoal]);
+
   if (!activeGoal) {
     return <Navigate to="/" />;
   }
@@ -26,6 +41,11 @@ export const GoalPage = () => {
     color: `var(--color-primary-${activeTeam!.short})`,
   };
 
+  const handleFavorite = () => {
+    setIsFavorite(!isFavorite);
+    setLocalStorage(getLocalStorage(), activeGoal);
+  };
+
   return (
     <>
       <div className={styles["goal-page-container"]}>
@@ -33,9 +53,7 @@ export const GoalPage = () => {
           <div
             className={styles["goal-page-background-image"]}
             style={{
-              backgroundImage: `url('/src/assets/images/stadiums/stadium-${
-                activeTeam?.short
-              }.${activeTeam?.short === "city" ? "webp" : "jpg"}')`,
+              backgroundImage: `url('/src/assets/images/stadiums/stadium-${activeTeam?.short}.jpg')`,
             }}
           ></div>
           <div className={styles["goal-page-data-container"]}>
@@ -68,7 +86,9 @@ export const GoalPage = () => {
                   <FavoriteIcon
                     style={{
                       cursor: "pointer",
+                      opacity: isFavorite ? "100%" : "10%",
                     }}
+                    onClick={handleFavorite}
                   />
                 </div>
               </div>
