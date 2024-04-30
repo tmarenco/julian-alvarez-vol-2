@@ -6,6 +6,7 @@ import { ActiveTeamProvider } from "./context/active-team/active-team.provider";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { GoalPage } from "./pages/Goal/GoalPage.tsx";
 import { Home } from "./pages/Home/Home.tsx";
+import { HeaderOptionsProvider } from "./context/header-options/header-options.provider.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +31,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ActiveTeamProvider>
-      <RouterProvider router={router} />
-    </ActiveTeamProvider>
+    <HeaderOptionsProvider>
+      <ActiveTeamProvider>
+        <RouterProvider router={router} />
+      </ActiveTeamProvider>
+    </HeaderOptionsProvider>
   </React.StrictMode>
 );

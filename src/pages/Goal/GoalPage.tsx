@@ -5,7 +5,14 @@ import { teams } from "../../data/teams";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Button } from "@mui/material";
+import { useContext, useEffect } from "react";
+import { HeaderOptionsContext } from "../../context/header-options/header-options.context";
+import { headerGoalPage } from "../../data/header";
 export const GoalPage = () => {
+  const { setHeaderOptions } = useContext(HeaderOptionsContext);
+
+  useEffect(() => setHeaderOptions(headerGoalPage), []);
+
   const { id } = useParams();
   const navigate = useNavigate();
 
