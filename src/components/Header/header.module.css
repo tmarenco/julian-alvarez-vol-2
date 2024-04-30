@@ -18,9 +18,9 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 768px) {
-        justify-content: center;;
-      }
+    /* @media (min-width: 768px) {
+        justify-content: center;
+      } */
 }
 
 .header-teams {
@@ -37,15 +37,20 @@
         text-decoration: none;
         color: inherit;
         cursor: pointer;
-        opacity: 50%;
 
 
         @media (min-width: 768px) {
             margin: 0 1rem;
             font-size: 20px;
         }
-    }
 
+
+    }
+    
+    a {
+        opacity: 50%;
+
+    }
 
     .nav-option:hover {
         text-decoration: underline solid white;
