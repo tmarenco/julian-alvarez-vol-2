@@ -2,7 +2,7 @@ import { HeaderContextOptionsInterface } from "../interfaces/header-interface"
 
 export const headerHome: HeaderContextOptionsInterface = {
     showTeams: true,
-    justifyContent: "center",
+    class: "justify-content-center",
     options: [
       { item: "Home", id: true, redirection: false, url: '' },
       { item: "Bio", id: true, redirection: false, url: '' },
@@ -13,7 +13,7 @@ export const headerHome: HeaderContextOptionsInterface = {
 
 export const headerGoalPage: HeaderContextOptionsInterface = {
       showTeams: false,
-      justifyContent: "start",
+      class: "justify-content-between",
       options: [
         { item: "< Volver", id: false, redirection: true, url: '/' }
       ],

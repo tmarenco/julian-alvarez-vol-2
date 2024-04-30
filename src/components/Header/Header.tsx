@@ -1,24 +1,36 @@
 import styles from "./header.module.css";
 import { Teams } from "../../shared/components/Teams/Teams";
 import { Link } from "react-scroll";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HeaderOptionsContext } from "../../context/header-options/header-options.context";
 import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const { headerOptions } = useContext(HeaderOptionsContext);
   const navigate = useNavigate();
-  const navOptionStyle = {
-    justifyContent:
-      window.innerWidth >= 768 ? headerOptions.justifyContent : "space-between",
-  };
-  //TODO: Esto debe cambiar cada vez que se hace un resize
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth >= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const headerItemJustifyContentClass = isWideScreen ? headerOptions.class : "";
 
   return (
     <>
       <div className={styles["header-container"]}>
         <div className={styles["header-content"]}>
-          <div className={styles["header-items"]} style={navOptionStyle}>
+          <div
+            className={`${styles["header-items"]} ${headerItemJustifyContentClass}`}
+          >
             {headerOptions.showTeams && (
               <div className={styles["header-teams"]}>
                 <Teams teamColor={"white"} direction={"row"} />
@@ -28,6 +40,7 @@ export const Header = () => {
               {headerOptions.options.map((option) =>
                 option.redirection ? (
                   <span
+                    key={option.item}
                     className={styles["nav-option"]}
                     onClick={() => navigate(option.url)}
                   >
