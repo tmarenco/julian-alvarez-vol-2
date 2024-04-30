@@ -16,6 +16,7 @@ import { TableMobile } from "../Tables/components/TableMobile";
 import { goals } from "../../data/goals";
 import { motion } from "framer-motion";
 import { GoalInterface } from "../../interfaces/goal-interface";
+import { getLocalStorage } from "../../utils/handleLocalStorage";
 
 export const Goals = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
@@ -132,8 +133,7 @@ export const Goals = () => {
   };
 
   const getStorageData = () => {
-    const storage = localStorage.getItem("favoriteGoals");
-    setFavoriteGoals(storage ? JSON.parse(storage) : []);
+    setFavoriteGoals(getLocalStorage);
   };
 
   const handleFavorite = (goal: GoalInterface) => {
