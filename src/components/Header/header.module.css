@@ -17,10 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* @media (min-width: 768px) {
-        justify-content: center;
-      } */
 }
 
 .header-teams {

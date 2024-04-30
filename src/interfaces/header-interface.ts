@@ -1,6 +1,6 @@
 export interface HeaderContextOptionsInterface {
     showTeams: boolean;
-    justifyContent: string;
+    class: string;
     options: Options[];
   }
 
