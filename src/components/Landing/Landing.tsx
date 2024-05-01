@@ -4,6 +4,7 @@ import { ActiveTeamContext } from "../../context/active-team/active-team.context
 import { motion } from "framer-motion";
 import { Teams } from "../../shared/components/Teams/Teams";
 import { calculateAge } from "../../utils/calculateAge";
+import { Link } from "react-scroll";
 
 const julianAge = calculateAge("31/01/2000");
 
@@ -71,18 +72,34 @@ export const Landing = () => {
                   </div>
                 ))}
               </div>
-              <div className={styles["landing-arrow"]}>
+              <Link
+                className={styles["landing-arrow"]}
+                to={"bio"}
+                spy={true}
+                smooth={true}
+                duration={100}
+                key={"bio"}
+                offset={0}
+              >
                 <img
                   src="/src/assets/images/icons/arrow-down-white.svg"
                   alt="mouse"
-                />
-              </div>
+                />{" "}
+              </Link>
             </div>
           </div>
         </motion.div>
-        <div className={styles["landing-mouse"]}>
+        <Link
+          className={styles["landing-mouse"]}
+          to="bio"
+          spy={true}
+          smooth={true}
+          duration={100}
+          key={"bio"}
+          offset={0}
+        >
           <img src="/src/assets/images/icons/mouse-white.svg" alt="mouse" />
-        </div>
+        </Link>
       </div>
     </>
   );
