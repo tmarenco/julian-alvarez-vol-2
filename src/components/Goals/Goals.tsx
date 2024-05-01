@@ -17,6 +17,7 @@ import { goals } from "../../data/goals";
 import { motion } from "framer-motion";
 import { GoalInterface } from "../../interfaces/goal-interface";
 import { getLocalStorage } from "../../utils/handleLocalStorage";
+import { animateScroll } from "react-scroll";
 
 export const Goals = () => {
   const { activeTeam } = useContext(ActiveTeamContext);
@@ -146,6 +147,14 @@ export const Goals = () => {
       : updatedFavoriteGoals.push(goal);
     setFavoriteGoals(updatedFavoriteGoals);
     localStorage.setItem("favoriteGoals", JSON.stringify(updatedFavoriteGoals));
+  };
+
+  const scrollToTop = () => {
+    const options = {
+      duration: 100,
+      smooth: true,
+    };
+    animateScroll.scrollToTop(options);
   };
 
   return (
@@ -350,7 +359,7 @@ export const Goals = () => {
           </div>
           <div className={styles["goals-go-home-container"]}>
             <div className={styles["goals-go-home-content"]}>
-              <p>Go to Home ^</p>
+              <p onClick={() => scrollToTop()}>Go to Home ^</p>
             </div>
           </div>
         </motion.div>

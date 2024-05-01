@@ -222,6 +222,7 @@
         img{
             width: 25px;
             cursor: pointer;
+            animation: moveUpDown 2s ease-in-out infinite;
         }
     }
 
@@ -239,9 +240,34 @@
         margin-bottom: 2rem;
         
         img {
+            animation: moveDownUp 2s ease-in-out infinite;
             cursor: pointer;
             width: 40px;
         }
     }
-
 }
+
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes moveDownUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
