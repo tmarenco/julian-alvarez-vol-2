@@ -67,8 +67,16 @@ export const GoalPage = () => {
                 </span>
                 - {activeGoal.rival} {activeGoal.rivalGoal}
               </p>
-              <div>
-                <h1>VIDEO</h1>
+              <div className="w-100 h-100 d-flex justify-content-center align-items-center">
+                <iframe
+                  title="YouTube Video"
+                  width="100%"
+                  height="100%"
+                  src={activeGoal.videoLink}
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                ></iframe>
               </div>
               <div className={styles["goal-date-icon-container"]}>
                 <div className="d-flex">

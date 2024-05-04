@@ -14,7 +14,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "17/03/2019",
         minute: "59",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 2,
@@ -28,7 +28,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "07/05/2019",
         minute: "35",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 3,
@@ -42,7 +42,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "13/12/2019",
         minute: "72",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 4,
@@ -56,7 +56,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "17/09/2020",
         minute: "80",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 5,
@@ -70,7 +70,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "22/09/2020",
         minute: "36",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 6,
@@ -84,7 +84,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "30/09/2020",
         minute: "11",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 7,
@@ -98,7 +98,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "30/09/2020",
         minute: "37",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 8,
@@ -112,7 +112,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "20/10/2020",
         minute: "60",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/Sua7n4rfkL0?si=gGIHkfoQD1mLmcVB"
     },
     {
         order: 9,
@@ -126,7 +126,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "30/07/2022",
         minute: "70",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 10,
@@ -140,7 +140,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "31/08/2022",
         minute: "65",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 11,
@@ -154,7 +154,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "31/08/2022",
         minute: "87",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 12,
@@ -168,7 +168,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "05/10/2022",
         minute: "76",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 13,
@@ -182,7 +182,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "02/11/2022",
         minute: "73",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 14,
@@ -196,7 +196,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "05/11/2022",
         minute: "16",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 15,
@@ -210,7 +210,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "09/11/2022",
         minute: "58",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 16,
@@ -224,7 +224,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "08/01/2023",
         minute: "30",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/T3xtX6Qp2jA?si=k8wWV2H0gvYgTTFS"
     },
     {
         order: 17,
@@ -238,7 +238,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "30/03/2022",
         minute: "72",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 18,
@@ -246,13 +246,13 @@ export const goals: GoalInterface[] = [
         rival: "Jamaica",
         julianGoal: 3, 
         rivalGoal: 0,
-        competition: "International Friendly",
+        competition: "FIFA International Friendly",
         season: "2022/2023",
-        matchDetail: "FIFA",
+        matchDetail: "FIFA International Friendly",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "28/09/2022",
         minute: "79",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 19,
@@ -260,13 +260,13 @@ export const goals: GoalInterface[] = [
         rival: "United Arab Emirates",
         julianGoal: 5, 
         rivalGoal: 0,
-        competition: "International Friendly",
+        competition: "FIFA International Friendly",
         season: "2022/2023",
-        matchDetail: "FIFA",
+        matchDetail: "FIFA International Friendly",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "16/11/2022",
         minute: "51",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 20,
@@ -280,7 +280,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "30/11/2022",
         minute: "79",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 21,
@@ -294,7 +294,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "03/12/2022",
         minute: "57",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 22,
@@ -308,7 +308,7 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "13/12/2022",
         minute: "39",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     },
     {
         order: 23,
@@ -322,6 +322,6 @@ export const goals: GoalInterface[] = [
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam aliquam aspernatur quasi impedit, quam tempore iure ipsa id expedita suscipit inventore dicta.",
         date: "13/12/2022",
         minute: "69",
-        videoLink: ""
+        videoLink: "https://www.youtube.com/embed/zgj8caT6odg?si=z2zP8BGOT1gE5KtF"
     }
 ]
