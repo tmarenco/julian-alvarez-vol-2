@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import styles from "./landing.module.css";
 import { ActiveTeamContext } from "../../context/active-team/active-team.context";
-import { motion } from "framer-motion";
 import { Teams } from "../../shared/components/Teams/Teams";
 import { calculateAge } from "../../utils/calculateAge";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { IncrementAnimation } from "../../shared/components/IncrementAnimation/IncrementAnimation";
 
 const julianAge = calculateAge("31/01/2000");
 
@@ -17,15 +18,18 @@ export const Landing = () => {
   const landingData = [
     {
       title: "Debut",
-      data: activeTeam.debut,
+      data: activeTeam.debut.toString().split("."),
     },
     {
       title: "Goal Average",
-      data: (activeTeam.goals / activeTeam.matches).toFixed(2),
+      data: (activeTeam.goals / activeTeam.matches)
+        .toFixed(2)
+        .toString()
+        .split("."),
     },
     {
       title: "Titles",
-      data: activeTeam.titles,
+      data: activeTeam.titles.toString().split("."),
     },
   ];
 
@@ -60,15 +64,34 @@ export const Landing = () => {
                 <p>{julianAge} Y.0.</p>
               </div>
               <div className={styles["landing-secondary-data"]}>
-                {landingData.map((item) => (
-                  <div key={item.title} className={styles["landing-box"]}>
+                {landingData.map((ldItem) => (
+                  <div key={ldItem.title} className={styles["landing-box"]}>
                     <p
                       style={colorStyle}
                       className={styles["landing-box-title"]}
                     >
-                      {item.title.toUpperCase()}
+                      {ldItem.title.toUpperCase()}
                     </p>
-                    <p className={styles["landing-box-data"]}>{item.data}</p>
+
+                    <p className={styles["landing-box-data"]}>
+                      {ldItem.data.map((number, index) => (
+                        <span key={index}>
+                          {number.startsWith("0") ? (
+                            <>
+                              <span>0</span>
+                              {number.length > 1 && (
+                                <IncrementAnimation
+                                  data={Number(number.slice(1))}
+                                />
+                              )}
+                            </>
+                          ) : (
+                            <IncrementAnimation data={Number(number)} />
+                          )}
+                          {index !== ldItem.data.length - 1 && <span>.</span>}
+                        </span>
+                      ))}
+                    </p>
                   </div>
                 ))}
               </div>
