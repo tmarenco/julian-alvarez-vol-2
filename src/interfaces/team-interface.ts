@@ -7,4 +7,5 @@ export interface Team {
     titles: number;
     number: number;
     debut: string;
+    currentTeam: boolean;
 }

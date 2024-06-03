@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Teams } from "../../shared/components/Teams/Teams";
 import styles from "./goals.module.css";
-import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 import {
   Checkbox,
   FormControl,
@@ -18,26 +17,27 @@ import { motion } from "framer-motion";
 import { GoalInterface } from "../../interfaces/goal-interface";
 import { getLocalStorage } from "../../utils/handleLocalStorage";
 import { animateScroll } from "react-scroll";
+import { TeamsContext } from "../../context/teams/teams.context";
 
 export const Goals = () => {
-  const { activeTeam } = useContext(ActiveTeamContext);
+  const { activeTeam } = useContext(TeamsContext);
 
   const colorStyle = {
-    color: `var(--color-secondary-${activeTeam.short})`,
+    color: `var(--color-secondary-${activeTeam!.short})`,
   };
 
   const [season, setSeason] = useState("");
   const [favoriteCheckbox, setFavoriteCheckbox] = useState(false);
   const [competition, setCompetition] = useState("");
   const [activeTeamGoals, setActiveTeamGoals] = useState(
-    goals.filter((goal) => goal.team === activeTeam.team)
+    goals.filter((goal) => goal.team === activeTeam!.team)
   );
   const [favoriteGoals, setFavoriteGoals] = useState<GoalInterface[]>([]);
 
   const [seasons, setSeasons] = useState([
     ...new Set(
       goals
-        .filter((goal) => goal.team === activeTeam.team)
+        .filter((goal) => goal.team === activeTeam!.team)
         .map((goal) => goal.season)
     ),
   ]);
@@ -45,7 +45,7 @@ export const Goals = () => {
   const [competitions, setCompetitions] = useState([
     ...new Set(
       goals
-        .filter((goal) => goal.team === activeTeam.team)
+        .filter((goal) => goal.team === activeTeam!.team)
         .map((goal) => goal.competition)
     ),
   ]);
@@ -59,7 +59,7 @@ export const Goals = () => {
     //TODO: When the other filters change, change the favorite to false
     // setFilteredGoals(
     //   checked
-    //     ? favoriteGoals.filter((fav) => fav.team === activeTeam.team)
+    //     ? favoriteGoals.filter((fav) => fav.team === activeTeam!.team)
     //     : activeTeamGoals
     // );
 
@@ -76,8 +76,8 @@ export const Goals = () => {
   };
 
   useEffect(() => {
-    setActiveTeamGoals(goals.filter((goal) => goal.team === activeTeam.team));
-    setFilteredGoals(goals.filter((goal) => goal.team === activeTeam.team));
+    setActiveTeamGoals(goals.filter((goal) => goal.team === activeTeam!.team));
+    setFilteredGoals(goals.filter((goal) => goal.team === activeTeam!.team));
     setFavoriteCheckbox(false);
     seasonSetter();
     competitionSetter();
@@ -97,7 +97,7 @@ export const Goals = () => {
     setSeasons([
       ...new Set(
         goals
-          .filter((goal) => goal.team === activeTeam.team)
+          .filter((goal) => goal.team === activeTeam!.team)
           .map((goal) => goal.season)
       ),
     ]);
@@ -108,7 +108,7 @@ export const Goals = () => {
     setCompetitions([
       ...new Set(
         goals
-          .filter((goal) => goal.team === activeTeam.team)
+          .filter((goal) => goal.team === activeTeam!.team)
           .map((goal) => goal.competition)
       ),
     ]);
@@ -161,7 +161,7 @@ export const Goals = () => {
     <>
       <div className={styles["goals-container"]}>
         <motion.div
-          key={activeTeam.team}
+          key={activeTeam!.team}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -174,21 +174,21 @@ export const Goals = () => {
               <div className={styles["goals-team-stat"]}>
                 <p className={styles["goals-team-title"]}>Total matches</p>
                 <p className={styles["goals-team-value"]} style={colorStyle}>
-                  {activeTeam.matches}
+                  {activeTeam!.matches}
                 </p>
               </div>
               <div className={styles["goals-team-separator"]}></div>
               <div className={styles["goals-team-stat"]}>
                 <p className={styles["goals-team-title"]}>Goals scored</p>
                 <p className={styles["goals-team-value"]} style={colorStyle}>
-                  {activeTeam.goals}
+                  {activeTeam!.goals}
                 </p>
               </div>
               <div className={styles["goals-team-separator"]}></div>
               <div className={styles["goals-team-stat"]}>
                 <p className={styles["goals-team-title"]}>Assists</p>
                 <p className={styles["goals-team-value"]} style={colorStyle}>
-                  {activeTeam.assists}
+                  {activeTeam!.assists}
                 </p>
               </div>
             </div>
