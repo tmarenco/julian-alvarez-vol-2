@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styles from "./bio.module.css";
-import { ActiveTeamContext } from "../../context/active-team/active-team.context";
+import { TeamsContext } from "../../context/teams/teams.context";
 
 const julianInfo = [
   {
@@ -26,10 +26,10 @@ const julianInfo = [
 ];
 
 export const Bio = () => {
-  const { activeTeam } = useContext(ActiveTeamContext);
+  const { activeTeam } = useContext(TeamsContext);
 
   const colorStyle = {
-    color: `var(--color-primary-${activeTeam.short})`,
+    color: `var(--color-primary-${activeTeam!.short})`,
   };
 
   return (
@@ -43,7 +43,7 @@ export const Bio = () => {
               <div className={styles["bio-number"]}>
                 <p className={styles["bio-heading-title"]}>Number</p>
                 <p className={styles["bio-heading-info"]} style={colorStyle}>
-                  {activeTeam.number}
+                  {activeTeam!.number}
                 </p>
               </div>
               <div className={styles["bio-position"]}>
@@ -77,7 +77,9 @@ export const Bio = () => {
           </div>
           <div className={styles["bio-image"]}>
             <img
-              src={`/src/assets/images/julian-trophy/trophy-${activeTeam.short}.png`}
+              src={`/src/assets/images/julian-trophy/trophy-${
+                activeTeam!.short
+              }.png`}
               alt="julian-trophy"
             />
           </div>

@@ -1,35 +1,35 @@
 import { useContext } from "react";
 import styles from "./landing.module.css";
-import { ActiveTeamContext } from "../../context/active-team/active-team.context";
 import { Teams } from "../../shared/components/Teams/Teams";
 import { calculateAge } from "../../utils/calculateAge";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { IncrementAnimation } from "../../shared/components/IncrementAnimation/IncrementAnimation";
+import { TeamsContext } from "../../context/teams/teams.context";
 
 const julianAge = calculateAge("31/01/2000");
 
 export const Landing = () => {
-  const { activeTeam } = useContext(ActiveTeamContext);
+  const { activeTeam } = useContext(TeamsContext);
   const colorStyle = {
-    color: `var(--color-primary-${activeTeam.short})`,
+    color: `var(--color-primary-${activeTeam!.short})`,
   };
 
   const landingData = [
     {
       title: "Debut",
-      data: activeTeam.debut.toString().split("."),
+      data: activeTeam!.debut.toString().split("."),
     },
     {
       title: "Goal Average",
-      data: (activeTeam.goals / activeTeam.matches)
+      data: (activeTeam!.goals / activeTeam!.matches)
         .toFixed(2)
         .toString()
         .split("."),
     },
     {
       title: "Titles",
-      data: activeTeam.titles.toString().split("."),
+      data: activeTeam!.titles.toString().split("."),
     },
   ];
 
@@ -38,7 +38,7 @@ export const Landing = () => {
       <div className={styles["landing-container"]}>
         <motion.div
           className={styles.landing}
-          key={activeTeam.team}
+          key={activeTeam!.team}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.75 }}
@@ -49,7 +49,9 @@ export const Landing = () => {
           <div className={styles["landing-img-content"]}>
             <img
               className={styles["landing-img"]}
-              src={`/src/assets/images/julian-home/julian-${activeTeam.short}.png`}
+              src={`/src/assets/images/julian-home/julian-${
+                activeTeam!.short
+              }.png`}
               alt="alvarez-home"
             />
           </div>

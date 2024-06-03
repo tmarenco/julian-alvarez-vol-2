@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { teams } from "../../../data/teams";
 import styles from "./teams.module.css";
-import { ActiveTeamContext } from "../../../context/active-team/active-team.context";
+import { TeamsContext } from "../../../context/teams/teams.context";
 
 interface Props {
   teamColor: string;
@@ -9,12 +8,12 @@ interface Props {
 }
 
 export const Teams = ({ teamColor, direction }: Props) => {
-  const { activeTeam, setActiveTeam } = useContext(ActiveTeamContext);
+  const { activeTeam, setActiveTeam, teams } = useContext(TeamsContext);
 
   return (
     <>
       <div className={`d-flex flex-${direction}`}>
-        {teams.map((team) => (
+        {teams!.map((team) => (
           <img
             key={team.short}
             className={`${styles.team} 

@@ -1,7 +1,6 @@
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import styles from "./goal-page.module.css";
 import { goals } from "../../data/goals";
-import { teams } from "../../data/teams";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Button } from "@mui/material";
@@ -13,8 +12,10 @@ import {
   setLocalStorage,
 } from "../../utils/handleLocalStorage";
 import { GoalInterface } from "../../interfaces/goal-interface";
+import { TeamsContext } from "../../context/teams/teams.context";
 export const GoalPage = () => {
   const { setHeaderOptions } = useContext(HeaderOptionsContext);
+  const { teams } = useContext(TeamsContext);
 
   useEffect(() => setHeaderOptions(headerGoalPage), []);
 
@@ -35,7 +36,7 @@ export const GoalPage = () => {
   if (!activeGoal) {
     return <Navigate to="/" />;
   }
-  const activeTeam = teams.find((team) => team.team === activeGoal.team);
+  const activeTeam = teams!.find((team) => team.team === activeGoal.team);
 
   const colorStyle = {
     color: `var(--color-primary-${activeTeam!.short})`,
