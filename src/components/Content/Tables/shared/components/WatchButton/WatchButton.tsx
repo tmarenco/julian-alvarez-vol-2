@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { GoalInterface } from "../../../../../interfaces/goal-interface";
+import { GoalInterface } from "../../../../../../interfaces/goal-interface";
 import styles from "./watch-button.module.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 

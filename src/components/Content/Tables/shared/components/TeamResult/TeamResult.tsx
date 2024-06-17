@@ -1,7 +1,7 @@
 import styles from "./team-result.module.css";
 import { useContext } from "react";
-import { GoalInterface } from "../../../../../interfaces/goal-interface";
-import { TeamsContext } from "../../../../../context/teams/teams.context";
+import { GoalInterface } from "../../../../../../interfaces/goal-interface";
+import { TeamsContext } from "../../../../../../context/teams/teams.context";
 
 interface Props {
   result: Partial<GoalInterface>;

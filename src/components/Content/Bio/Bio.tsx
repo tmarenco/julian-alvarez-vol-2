@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styles from "./bio.module.css";
-import { TeamsContext } from "../../context/teams/teams.context";
+import { TeamsContext } from "../../../context/teams/teams.context";
 
 const julianInfo = [
   {

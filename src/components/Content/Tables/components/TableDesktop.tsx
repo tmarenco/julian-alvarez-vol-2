@@ -1,4 +1,4 @@
-import { GoalInterface } from "../../../interfaces/goal-interface";
+import { GoalInterface } from "../../../../interfaces/goal-interface";
 import { TeamResult } from "../shared/components/TeamResult/TeamResult";
 import { WatchButton } from "../shared/components/WatchButton/WatchButton";
 import styles from "./tables.module.css";
