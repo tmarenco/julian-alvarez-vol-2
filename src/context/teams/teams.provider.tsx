@@ -1,22 +1,19 @@
 import { useEffect, useState } from "react";
 import { Team } from "../../interfaces/team-interface";
-import { fetchTeams } from "../../utils/fetchTeams";
+import { fetchTeams } from "../../api/fetchTeams";
 import { TeamsContext } from "./teams.context";
+import { States } from "../../enums/states.enum";
 
 export const TeamsProvider = ({ children }: React.PropsWithChildren) => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [activeTeam, setActiveTeam] = useState<Team | undefined>();
-  const [isLoading, setIsLoading] = useState(true);
+  const [teamsState, setTeamsState] = useState<States>(States.LOADING);
 
   const fetchAndSetTeams = async () => {
-    try {
-      const fetchedTeams = await fetchTeams();
-      setTeams(fetchedTeams);
-      setActiveTeam(fetchedTeams.find((team) => !!team.currentTeam));
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-    }
+    const fetchedTeams = await fetchTeams();
+    setTeams(fetchedTeams.teams);
+    setTeamsState(fetchedTeams.state);
+    setActiveTeam(fetchedTeams.teams.find((team) => !!team.currentTeam));
   };
 
   useEffect(() => {
@@ -25,7 +22,7 @@ export const TeamsProvider = ({ children }: React.PropsWithChildren) => {
 
   return (
     <TeamsContext.Provider
-      value={{ activeTeam, teams, setActiveTeam, isLoading }}
+      value={{ activeTeam, teams, setActiveTeam, teamsState }}
     >
       {children}
     </TeamsContext.Provider>

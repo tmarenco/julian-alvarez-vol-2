@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Teams } from "../../shared/components/Teams/Teams";
+import { Teams } from "../../../shared/components/Teams/Teams";
 import styles from "./goals.module.css";
 import {
   Checkbox,
@@ -12,12 +12,12 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { TableDesktop } from "../Tables/components/TableDesktop";
 import { TableMobile } from "../Tables/components/TableMobile";
-import { goals } from "../../data/goals";
+import { goals } from "../../../data/goals";
 import { motion } from "framer-motion";
-import { GoalInterface } from "../../interfaces/goal-interface";
-import { getLocalStorage } from "../../utils/handleLocalStorage";
+import { GoalInterface } from "../../../interfaces/goal-interface";
+import { getLocalStorage } from "../../../utils/handleLocalStorage";
 import { animateScroll } from "react-scroll";
-import { TeamsContext } from "../../context/teams/teams.context";
+import { TeamsContext } from "../../../context/teams/teams.context";
 
 export const Goals = () => {
   const { activeTeam } = useContext(TeamsContext);

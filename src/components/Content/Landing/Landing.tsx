@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import styles from "./landing.module.css";
-import { Teams } from "../../shared/components/Teams/Teams";
-import { calculateAge } from "../../utils/calculateAge";
+import { Teams } from "../../../shared/components/Teams/Teams";
+import { calculateAge } from "../../../utils/calculateAge";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { IncrementAnimation } from "../../shared/components/IncrementAnimation/IncrementAnimation";
-import { TeamsContext } from "../../context/teams/teams.context";
+import { IncrementAnimation } from "../../../shared/components/IncrementAnimation/IncrementAnimation";
+import { TeamsContext } from "../../../context/teams/teams.context";
 
 const julianAge = calculateAge("31/01/2000");
 

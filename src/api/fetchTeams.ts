@@ -1,6 +1,12 @@
+import { States } from "../enums/states.enum";
 import { Team } from "../interfaces/team-interface";
 
-export const fetchTeams = async (): Promise<Team[]> => {
+export interface TeamResponse {
+  teams: Team[],
+  state: States
+}
+
+export const fetchTeams = async (): Promise<TeamResponse> => {
     try {
       const csv = await fetch(
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vQXCh_h2NnNHsxOAFMKI4k7BpJ7ORMSIInmEL8ka3s2JLVfmLHq60i3IwxpPeE9mx25N2BL2VKm1yYg/pub?output=csv"
@@ -25,9 +31,15 @@ export const fetchTeams = async (): Promise<Team[]> => {
             currentTeam: JSON.parse(currentTeam)
           };
         });
-        return teams
+
+        return {
+          teams: teams,
+          state: teams.length ? States.COMPLETED : States.EMPTY 
+        }
     } catch (error) {
-      console.log(error)
-      throw Error
+      return {
+        teams: [],
+        state: States.ERROR
+      }
     }
   };

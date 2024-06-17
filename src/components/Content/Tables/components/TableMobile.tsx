@@ -3,7 +3,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { TeamResult } from "../shared/components/TeamResult/TeamResult";
 import { WatchButton } from "../shared/components/WatchButton/WatchButton";
-import { GoalInterface } from "../../../interfaces/goal-interface";
+import { GoalInterface } from "../../../../interfaces/goal-interface";
 
 interface Props {
   goals: GoalInterface[];
