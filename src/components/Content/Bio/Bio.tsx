@@ -76,12 +76,20 @@ export const Bio = () => {
             </div>
           </div>
           <div className={styles["bio-image"]}>
-            <img
-              src={`/src/assets/images/julian-trophy/trophy-${
-                activeTeam!.short
-              }.png`}
-              alt="julian-trophy"
-            />
+            <div className={styles["image-container"]}>
+              <img
+                src={`/src/assets/images/julian-trophy/sparkles.png`}
+                alt="sparkles"
+                className={styles["background-image"]}
+              />
+              <img
+                src={`/src/assets/images/julian-trophy/trophy-${
+                  activeTeam!.short
+                }.png`}
+                alt="julian-trophy"
+                className={styles["trophy-image"]}
+              />
+            </div>
           </div>
         </div>
       </div>

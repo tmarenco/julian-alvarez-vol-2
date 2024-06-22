@@ -9,12 +9,8 @@
 #### Home
 
 - Agregar capa sombreada en el encabezado.
-- Reemplzar fotos de home de seleccion y city
 
 #### Bio
-
-- Probar cambios de fotos en bio separando destellos e imagen y agregando difuminado (Color Dodge)
-- Chequear Ipad Pro y Ipad Air que se agranda la pantalla por la imagen de la bio
 
 #### Goals
 
