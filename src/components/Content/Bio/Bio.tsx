@@ -36,7 +36,7 @@ export const Bio = () => {
     <>
       <div id={"bio"} className={styles["bio-container"]}>
         <div className={styles["bio-white-gradient"]}></div>
-        <p className={styles["bio-background-text"]}>ÁLVAREZ</p>
+        <div className={styles["bio-background-text"]}></div>
         <div className={styles["bio-content"]}>
           <div className={styles["bio-data"]}>
             <div className={styles["bio-heading-data"]}>
