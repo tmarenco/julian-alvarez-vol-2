@@ -36,7 +36,7 @@ export const Bio = () => {
     <>
       <div id={"bio"} className={styles["bio-container"]}>
         <div className={styles["bio-white-gradient"]}></div>
-        <p className={styles["bio-background-text"]}>ÁLVAREZ</p>
+        <div className={styles["bio-background-text"]}></div>
         <div className={styles["bio-content"]}>
           <div className={styles["bio-data"]}>
             <div className={styles["bio-heading-data"]}>
@@ -76,12 +76,20 @@ export const Bio = () => {
             </div>
           </div>
           <div className={styles["bio-image"]}>
-            <img
-              src={`/src/assets/images/julian-trophy/trophy-${
-                activeTeam!.short
-              }.png`}
-              alt="julian-trophy"
-            />
+            <div className={styles["image-container"]}>
+              <img
+                src={`/src/assets/images/julian-trophy/sparkles.png`}
+                alt="sparkles"
+                className={styles["background-image"]}
+              />
+              <img
+                src={`/src/assets/images/julian-trophy/trophy-${
+                  activeTeam!.short
+                }.png`}
+                alt="julian-trophy"
+                className={styles["trophy-image"]}
+              />
+            </div>
           </div>
         </div>
       </div>
